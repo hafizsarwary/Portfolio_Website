@@ -192,12 +192,12 @@
 /* 3. slider shape 
 ----------------------------------------------------*/
 .hero-shape1 {
-	right: 6%;
+	right: 13%;
 	top: 23%;
 }
 .hero-shape.hero-shape2 {
-	bottom: 8%;
-	left: 10%;
+	bottom: 13%;
+	right: 8%;
 }
 .hero-shape.hero-shape3 {
 	left: 9%;

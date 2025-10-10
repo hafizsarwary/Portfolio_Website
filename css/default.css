@@ -869,7 +869,6 @@
 .neutral-bg2 {
 	background: var(--neutral-color2);
 }
-
 .primary-bg{
 	background: #f0f2fb;
 }
@@ -897,6 +896,7 @@
 .primary-color{
 	color: var(--primary-color)
 }
+.light-border-color { color: var(--light-border);}
 .text-color{
 	color: var(--text-color);
 }
@@ -989,3 +989,4 @@
 
 /* common-css */
 .line-height-1{line-height: 1;}                    
+ 
