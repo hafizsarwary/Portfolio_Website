@@ -1,214 +1,188 @@
-(function ($) {
-	"use strict";
-	
-	// JS Index
-	//----------------------------------------
-	// 1. preloader
-	// 2. background image
-	// 3. Animate the scroll to top
-	// 4. Cats Filter
-	// 4. Circular Bars - Knob
-	// 5. accordion js
-	// 6. tilt js
-	// 7. mixitup js
-	// 8. Contact form
-	// 9. vanta js 
-	//-------------------------------------------------
- 
-	// 1. preloader
-	//---------------------------------------------------------------------------
-	$(window).load(function(){
-	    $('#preloader').fadeOut('slow',function(){$(this).remove();});
-	});
- 
-	// 2. background image
-	//---------------------------------------------------------------------------
-	$("[data-background]").each(function (){
-	    $(this).css("background-image","url(" + $(this).attr("data-background") + ")");
-	});
- 
-	// 3. Animate the scroll to top
-    // --------------------------------------------------------------------------
-    // Show or hide the sticky footer button
-	$(window).on('scroll', function() {
-		if($(this).scrollTop() > 100){
-		$('#scroll').addClass('show');
-		} else{
-		$('#scroll').removeClass('show');
-		}
-	});
+$(document).ready(function () {
 
-	$('#scroll').on('click', function(event) {
-		event.preventDefault();
-		
-		$('html, body').animate({
-		scrollTop: 0,
-		}, 600);
-	});
-	
+    // PRELOADER
+    $('#preloader').delay(500).fadeOut('slow'); // will fade out the white DIV that covers the website.
 
 
+        // PAGE LOADER
+    jQuery('#grid-container').on('initComplete.cbp', function () {
+        if ($('#ajax-tab-container').length) {
+            $('#ajax-tab-container').easytabs({
+                tabs: 'header nav ul li',
+                animate			: true,
+                updateHash		: false,
+                transitionIn	:'fadeIn',
+                transitionOut	:'fadeOut',
+                animationSpeed	:100,
+                tabActiveClass	:'active',
+                transitionInEasing: 'linear',
+                  transitionOutEasing: 'linear',
+            });
+        }
+    });
 
 
-	// 4. Cats Filter
-    // ---------------------------------------------------------------------------
-	
-	var $catsfilter = $('.cats-filter');
+    // RESPONSIVE MENU
+    function transform(){
+        var outdiv = '<div class="menuout"><div class="menuin"><ul class="tabs"></ul></div></div>';
+        $(outdiv).appendTo("nav");
+        var resmenus = $('.tabs').html();
+        $(".menuout .menuin .tabs").append(resmenus);
+       $('.menuin').hide(); 
+    }
+    transform();
+    $('.hamburger').on('click', function() {
+       $('.menuin').slideToggle(); 
+    });
+    $('.menuout').on('click', function () {
+        $('.menuin').slideUp();  
+    });
 
-	// Copy categories to item classes
-	$catsfilter.find('a').click(function() {
-		var currentOption = $(this).attr('data-filter');
-		$(this).parent().parent().find('a').removeClass('current');
-		$(this).addClass('current');
-	});	
+    // OWL CAROUSEL GENERAL JS
+    if ($('.owl-carousel').length) {
+        $('.owl-carousel').each(function () {
+            $(this).owlCarousel({
+                items: $(this).data('items') ? $(this).data('items') : 3
+                , autoPlay: $(this).data('autoplay') ? $(this).data('autoplay') : 2500
+                , pagination: $(this).data('pagination') ? $(this).data('pagination') : false
+                , itemsDesktop: [1199, 3]
+                , itemsDesktopSmall: [979, 3]
+            });
+        });
+    }
 
- 
-	
+    // PORTFOLIO CONTENT  
+    $('#grid-container').cubeportfolio({
+        layoutMode: 'grid',
+        filters: '#filters-container',
+        gridAdjustment: 'responsive',
+        animationType: 'skew',
+        defaultFilter: '*',
+        gapVertical: 0,
+        gapHorizontal: 0,
+        singlePageAnimation: 'fade',
+        mediaQueries: [{
+                width: 700,
+                cols: 3,
+            }, {
+                width: 480,
+                cols: 2,
+                options: {
+                    caption: '',
+                    gapHorizontal: 30,
+                    gapVertical: 20,
+                }
+            }, {
+                width: 320,
+                cols: 1,
+                options: {
+                    caption: '',
+                    gapHorizontal: 50,
+                }
+            }],            
+        singlePageCallback: function (url, element) {
+            var t = this;
+            $.ajax({
+                    url: url,
+                    type: 'GET',
+                    dataType: 'html',
+                    timeout: 30000
+                })
+                .done(function (result) {
+                    t.updateSinglePage(result);
+                })
+                .fail(function () {
+                    t.updateSinglePage('AJAX Error! Please refresh the page!');
+                });
+        },
+            plugins: {
+                loadMore: {
+                    element: '#js-loadMore-agency',
+                    action: 'click',
+                    loadItems: 3,
+                }
+            }
+    }); 
 
-    // 5. Circular Bars - Knob
-    // ---------------------------------------------------------------------------
+    // BLOG CONTENT  
+    $('#grid-blog').cubeportfolio({
+        layoutMode: 'grid',
+        gridAdjustment: 'responsive',
+        gapVertical: 0,
+        gapHorizontal: 0,
+        mediaQueries: [{
+                width: 700,
+                cols: 3,
+            }, {
+                width: 480,
+                cols: 2,
+                options: {
+                    caption: '',
+                    gapHorizontal: 30,
+                    gapVertical: 20,
+                }
+            }, {
+                width: 320,
+                cols: 1,
+                options: {
+                    caption: '',
+                    gapHorizontal: 50,
+                }
+            }],
+            plugins: {
+                loadMore: {
+                    element: '#load-posts',
+                    action: 'click',
+                    loadItems: 3,
+                }
+            }
+    }); 
 
-    	if (typeof ($.fn.knob) != 'undefined') {
+    // GALLERY WIDGET  
+    $('#widget-gallery').cubeportfolio({
+        layoutMode: 'grid',
+        gridAdjustment: 'responsive',
+        gapVertical: 0,
+        gapHorizontal: 0,
+        mediaQueries: [{
+                width: 700,
+                cols: 4,
+            }, {
+                width: 480,
+                cols: 2,
+                options: {
+                    caption: '',
+                    gapHorizontal: 30,
+                    gapVertical: 20,
+                }
+            }, {
+                width: 320,
+                cols: 1,
+                options: {
+                    caption: '',
+                    gapHorizontal: 50,
+                }
+            }]
+    }); 
 
-		$('.knob').each(function () {
-	
-			var $this = $(this),
-	
-			knobVal = $this.attr('data-rel');
-	
-			$this.knob({
-	
-			'draw': function () {
-		
-					$(this.i).val(this.cv + '%');
-		
-			}
-	
-		});
- 
-		$this.appear(function () {
-	
-		$({
-	
-				value: 0
-	
-		}).animate({
-	
-				value: knobVal
-	
-		}, {
-	
-			duration: 2000,
-	
-			easing: 'swing',
-	
-			step: function () {
-	
-			$this.val(Math.ceil(this.value)).trigger('change');
-	
-			}
-	
-		});
- 
-			}, {
-		
-			accX: 0,
-		
-			accY: -150
-		
-			});
- 
-		});
- 
- 	};
-
-
-
-
-	// 6. accordion js
-    // ---------------------------------------------------------------------------
-	$('.accordion-page-wrapper .collapse').collapse()
-
+}); // document ready end 
 
 
-
-//     // 7. tilt js
-//     // ---------------------------------------------------------------------------
-//     $('.tilt').tilt({
-// 		glare: true,
-//     		maxGlare: .5
-// 	});
-
-
-
-	
-	// 7. mixitup js
-    // --------------------------------------------------------------------------
-	mixitup('.mixitup-gallery', {
-		selectors: {
-		    control: '[data-mixitup-control]'
-		}
-	 });
-
-
-	 
-
-	// 8. Contact form 
-    //---------------------------------------------------------------------------
-    $(function() {
-		// Here is the form
-		var form = $('#contact-form');
-
-		// Getting the messages div
-		var formMessages = $('.form-message');
-
-
-		// Setting up an event listener for the contact form
-		$(form).submit(function(event) {
-		// Stopping the browser to submit the form
-		event.preventDefault();
-		
-		// Serializing the form data
-		var formData = $(form).serialize();
-
-		// Submitting the form using AJAX
-		$.ajax({
-			type: 'POST',
-			url: $(form).attr('action'),
-			data: formData
-		}).done(function(response) {
-		
-			// Making the formMessages div to have the 'success' class
-			$(formMessages).removeClass('error');
-			$(formMessages).addClass('success');
-
-			// Setting the message text
-			$(formMessages).text(response);
-
-			// Clearing the form after successful submission 
-			$('#inputName').val('');
-			$('#inputEmail').val('');
-			$('#inputPhone').val('');
-			$('#inputMessage').val('');
-		}).fail(function(data) {
-		
-			// Making the formMessages div to have the 'error' class
-			$(formMessages).removeClass('success');
-			$(formMessages).addClass('error');
-
-			// Setting the message text
-			if (data.responseText !== '') {
-				$(formMessages).text(data.responseText);
-			} else {
-				$(formMessages).text('Oops! An error occurred and your message could not be sent.');
-			}
-		});
-
-		});
-
-	});
+"use strict";
+$(window).load(function () {
 
 
 
 
-})(jQuery);
+
+}); // window load end 
+
+
+
+
+
+
+
+
+
+
