@@ -165,6 +165,27 @@ $(document).ready(function () {
             }]
     }); 
 
+    // SERVICE CARDS -> MODAL
+    $('.services-grid .service').css('cursor','pointer');
+    $('.services-grid').on('click', '.service', function(){
+        var $card = $(this);
+        var title = $.trim($card.find('.title').text());
+        var desc = $.trim($card.find('.little-text').text());
+        var iconClass = '';
+        var $icon = $card.find('.icon i').first();
+        if ($icon.length){
+            var classes = ($icon.attr('class')||'').split(/\s+/);
+            for (var i=0;i<classes.length;i++){
+                if (classes[i].indexOf('flaticon-')===0){ iconClass = classes[i]; break; }
+            }
+        }
+        var $modal = $('#serviceModal');
+        $modal.find('.modal-title .title-text').text(title);
+        if (iconClass){ $modal.find('.modal-title i').attr('class', iconClass); }
+        $modal.find('.modal-body').text(desc);
+        $modal.modal('show');
+    });
+
 }); // document ready end 
 
 
@@ -176,7 +197,6 @@ $(window).load(function () {
 
 
 }); // window load end 
-
 
 
 

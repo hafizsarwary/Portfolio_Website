@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>GeoPandas: turn shapefiles into answers</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../css/bootstrap.css"/>
+<link rel="stylesheet" href="../css/reset.css"/>
+<link rel="stylesheet" href="../cubeportfolio/css/cubeportfolio.min.css"/>
+<link rel="stylesheet" href="../css/style.css"/>
+<link rel="stylesheet" href="../css/colors/yellow.css" id="color" />
+<link rel="stylesheet" href="../icon-fonts/font-awesome-4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="../icon-fonts/web-design/flaticon.css" />
+</head>
+<body>
+<div class="wrapper top_60 container">
+<div class="row">
+<div class="col-lg-3 col-md-4">
+    <div class="profile">
+        <div class="profile-name">
+            <span class="name">Blog</span><br>
+            <span class="job">Python Notes</span>
+        </div>
+        <figure class="profile-image">
+            <img src="../images/profile.jpg" alt="">
+        </figure>
+        <div class="col-md-12">
+            <a class="site-btn icon" href="../index.html#blog">Back to Blog <i class="fa fa-long-arrow-left" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    </div>
+    <div id="ajax-tab-container" class="col-lg-9 col-md-8 tab-container">
+        <div id="content" class="panel-container col-md-12">
+            <div id="blog-post">
+                <div class="row">
+                    <div class="col-md-8 post">
+                        <div class="blog-image">
+                            <img src="../images/blogs/blog-5.jpg" alt="">
+                        </div>
+                        <div class="post-content">
+                            <h1 class="blog-title bottom_30 top_30">GeoPandas: turn shapefiles into answers</h1>
+                            <p>GeoPandas makes GIS tasks simple in Python. Here’s a tiny recipe that we use in class and projects.</p>
+                            <ol>
+                                <li>Read data: load shapefiles/GeoJSON into a GeoDataFrame.</li>
+                                <li>Fix CRS: reproject to your working CRS (e.g., EPSG:3857 or 4326).</li>
+                                <li>Clean columns: rename fields, drop nulls, standardize units.</li>
+                                <li>Spatial join: combine layers (points-in-polygons, nearest).</li>
+                                <li>Export: save clean results as GeoJSON or shapefile.</li>
+                            </ol>
+                            <p class="little-text">Tip: for large data, try <b>dask-geopandas</b> or convert to <b>parquet</b> and keep only the fields you need.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 blog-sidebar">
+                        <div class="category">
+                            <div class="section-title bottom_15 top_15"><span></span><h3>Tags</h3></div>
+                            <ul class="category-list">
+                                <li><a href="#">python</a></li>
+                                <li><a href="#">geopandas</a></li>
+                                <li><a href="#">spatial join</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="../js/jquery-2.1.4.min.js"></script>
+<script src="../cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.easytabs.min.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

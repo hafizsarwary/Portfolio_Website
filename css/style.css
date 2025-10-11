@@ -617,6 +617,25 @@ section.graybg{
     background: #fafafa;
 }
 
+.services-grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 22px;
+}
+
+@media (min-width: 576px){
+    .services-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 768px){
+    .services-grid{ grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 992px){
+    .services-grid{ grid-template-columns: repeat(4, 1fr); }
+}
+@media (min-width: 1200px){
+    .services-grid{ grid-template-columns: repeat(5, 1fr); }
+}
+
 .services .service span.title{
     font-size: 14px;
     font-weight: 500;
@@ -651,10 +670,54 @@ section.graybg{
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
-    padding: 20px;
-   box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08);
-   min-height: 186px;
+    padding: 20px 18px;
+    box-shadow: 0px 8px 32px rgba(4, 6, 4, 0.08);
+    min-height: 186px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform .2s ease, box-shadow .2s ease;
 }
+
+.service .icon{ color: #333; margin-bottom: 10px; }
+.service:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 14px 40px rgba(4,6,4,0.12);
+}
+.service span.title{ display:block; font-size:15px; font-weight:600; line-height:1.22; margin-top:6px; }
+.service p.little-text{ margin-top:10px; margin-bottom:0; }
+
+/* Expertise cards fine‑tuning */
+.services .service .icon{ 
+    width: 56px; height: 56px; 
+    border-radius: 12px; 
+    background: #f5f7fa; 
+    display:flex; align-items:center; justify-content:center;
+}
+.services .service .icon i:before{ font-size: 28px; }
+.services .service span.title{ 
+    text-wrap: balance; 
+    display: -webkit-box; 
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical; 
+    overflow: hidden;
+    line-height:1.18;
+}
+.services .service p.little-text{ 
+    color:#616a73; 
+    line-height:1.55; 
+    font-size:13.5px;
+    display: -webkit-box; 
+    -webkit-line-clamp: 6; 
+    -webkit-box-orient: vertical; 
+    overflow: hidden;
+}
+
+/* Modal fine-tuning for service details */
+#serviceModal .modal-dialog{ max-width:560px; width:auto; }
+#serviceModal .modal-title{ display:flex; align-items:center; gap:8px; }
+#serviceModal .modal-title i:before{ font-size:22px; margin-right:4px; }
+#serviceModal .modal-body{ font-size:14.5px; line-height:1.7; color:#4a4f55; }
 
 /*------------------------ 5 Resume Section ------------------------*/
 
@@ -687,7 +750,8 @@ ul.timeline{
 
 .timeline li .line-title{
     font-size: 16px;
-    line-height: 6px;
+    line-height: 1.4;
+    margin: 0 0 6px;
 }
 
 .timeline li:first-child{
@@ -1871,10 +1935,6 @@ footer .footer .copyright a:hover{
 
 
 }
-
-
-
-
 
 
 

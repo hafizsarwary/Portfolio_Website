@@ -1,0 +1,95 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<title>Real‑time Digital Twins for Smart Cities</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../css/bootstrap.css"/>
+<link rel="stylesheet" href="../css/reset.css"/>
+<link rel="stylesheet" href="../cubeportfolio/css/cubeportfolio.min.css"/>
+<link rel="stylesheet" href="../css/style.css"/>
+<link rel="stylesheet" href="../css/colors/yellow.css" id="color" />
+<link rel="stylesheet" href="../icon-fonts/font-awesome-4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="../icon-fonts/web-design/flaticon.css" />
+</head>
+<body>
+<div class="wrapper top_60 container">
+<div class="row">
+<div class="col-lg-3 col-md-4">
+    <div class="profile">
+        <div class="profile-name">
+            <span class="name">Blog</span><br>
+            <span class="job">Smart Cities</span>
+        </div>
+        <figure class="profile-image">
+            <img src="../images/profile.jpg" alt="">
+        </figure>
+        <div class="col-md-12">
+            <a class="site-btn icon" href="../index.html#blog">Back to Blog <i class="fa fa-long-arrow-left" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    </div>
+    <div id="ajax-tab-container" class="col-lg-9 col-md-8 tab-container">
+        <div id="content" class="panel-container col-md-12">
+            <div id="blog-post">
+                <div class="row">
+                    <div class="col-md-8 post">
+                        <div class="blog-image">
+                            <img src="../images/blogs/blog-4.jpg" alt="">
+                        </div>
+                        <div class="post-content">
+    <h1 class="blog-title bottom_30 top_30">Real‑time Digital Twins for Smart Cities</h1>
+    <p>Digital Twins turn a city from a static 2D map into a living 3D model that updates every second. When IoT sensors stream traffic, utility and environmental data into a 3D GIS, we can see what’s happening now, predict what will happen next, and test decisions before crews go to the field.</p>
+
+    <h3 class="top_15">What we connect</h3>
+    <ul>
+        <li><b>Traffic</b> — loop counters, camera detections, GPS from vehicles and phones.</li>
+        <li><b>Utilities</b> — pressure/flow in water and gas, substation and feeder telemetry, smart meters.</li>
+        <li><b>Environment</b> — air quality, noise, rainfall, river level and weather radar.</li>
+    </ul>
+
+    <h3 class="top_15">Practical applications</h3>
+    <ul>
+        <li><b>Predict traffic flow</b>: fuse sensors and history to forecast congestion 15–60 minutes ahead and retime signals.</li>
+        <li><b>Monitor network health</b>: detect leaks or outages from pressure/flow anomalies; dispatch the nearest crew with the right parts.</li>
+        <li><b>Simulate projects</b>: test a new bus lane, road closure or development in the twin before construction begins, comparing travel time, emissions and safety.</li>
+    </ul>
+
+    <h3 class="top_15">Why this is hard</h3>
+    <ul>
+        <li><b>Streaming scale</b>: thousands of sensors mean millions of messages/day. Use a message broker (MQTT/Kafka) and windowed aggregations.</li>
+        <li><b>Latency vs. accuracy</b>: quick decisions need sub‑second pipelines; deeper analytics may tolerate minutes. Run both paths.</li>
+        <li><b>Standards</b>: many vendors, formats and timezones. Normalize to common schemas, units and CRS.</li>
+        <li><b>Versioning</b>: assets change over time. Keep temporal topology so past analyses are reproducible.</li>
+    </ul>
+
+    <h3 class="top_15">A simple architecture</h3>
+    <ol>
+        <li>Ingest sensor streams → broker (MQTT/Kafka).</li>
+        <li>Stream ETL → clean, geotag, aggregate into tiles and events.</li>
+        <li>3D GIS/Digital Twin → render buildings, roads, underground utilities; attach live attributes.</li>
+        <li>Analytics → forecasts, anomaly detection and alerts; store snapshots for reporting.</li>
+    </ol>
+
+    <p class="little-text">Angle used in this article: real examples you can deploy now — traffic prediction, utility monitoring and pre‑construction simulation — using real‑time GIS feeding a 3D Digital Twin.</p>
+</div>
+</div>
+<div class="col-md-4 blog-sidebar">
+                        <div class="category">
+                            <div class="section-title bottom_15 top_15"><span></span><h3>Tags</h3></div>
+                            <ul class="category-list"><li><a href="#">#DigitalTwins</a></li><li><a href="#">#RealTimeGIS</a></li><li><a href="#">#SmartCities</a></li><li><a href="#">#IoT</a></li></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="../js/jquery-2.1.4.min.js"></script>
+<script src="../cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.easytabs.min.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

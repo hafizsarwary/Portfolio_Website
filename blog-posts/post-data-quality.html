@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Why data quality matters in maps</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../css/bootstrap.css"/>
+<link rel="stylesheet" href="../css/reset.css"/>
+<link rel="stylesheet" href="../cubeportfolio/css/cubeportfolio.min.css"/>
+<link rel="stylesheet" href="../css/style.css"/>
+<link rel="stylesheet" href="../css/colors/yellow.css" id="color" />
+<link rel="stylesheet" href="../icon-fonts/font-awesome-4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="../icon-fonts/web-design/flaticon.css" />
+</head>
+<body>
+<div class="wrapper top_60 container">
+<div class="row">
+<div class="col-lg-3 col-md-4">
+    <div class="profile">
+        <div class="profile-name">
+            <span class="name">Blog</span><br>
+            <span class="job">Geoinformatics Notes</span>
+        </div>
+        <figure class="profile-image">
+            <img src="../images/profile.jpg" alt="">
+        </figure>
+        <div class="col-md-12">
+            <a class="site-btn icon" href="../index.html#blog">Back to Blog <i class="fa fa-long-arrow-left" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    </div>
+    <div id="ajax-tab-container" class="col-lg-9 col-md-8 tab-container">
+        <div id="content" class="panel-container col-md-12">
+            <div id="blog-post">
+                <div class="row">
+                    <div class="col-md-8 post">
+                        <div class="blog-image">
+                            <img src="../images/blogs/blog-8.jpg" alt="">
+                        </div>
+                        <div class="post-content">
+                            <h1 class="blog-title bottom_30 top_30">Why data quality matters in maps</h1>
+                            <p>Maps are only as good as the data behind them. In our MSc work we use a simple quality checklist before any analysis or dashboard.</p>
+                            <ul>
+                                <li><b>Completeness</b> – are features missing or duplicated?</li>
+                                <li><b>Accuracy</b> – do coordinates, lengths and attributes make sense?</li>
+                                <li><b>Consistency</b> – same names, codes and units everywhere.</li>
+                                <li><b>Timeliness</b> – when was the dataset last updated?</li>
+                            </ul>
+                            <p>Quick wins we apply: fix common typos, snap obvious geometry errors, reproject to the right CRS, and add a simple <i>data dictionary</i> so the next person understands every field.</p>
+                            <p class="little-text">News: many organizations are releasing open QA rules for GIS. It’s a great time to build lightweight validation into your workflow.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 blog-sidebar">
+                        <div class="category">
+                            <div class="section-title bottom_15 top_15"><span></span><h3>Tags</h3></div>
+                            <ul class="category-list">
+                                <li><a href="#">data quality</a></li>
+                                <li><a href="#">GIS</a></li>
+                                <li><a href="#">standards</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="../js/jquery-2.1.4.min.js"></script>
+<script src="../cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.easytabs.min.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
