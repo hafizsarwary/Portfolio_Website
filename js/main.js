@@ -18,6 +18,8 @@ $(document).ready(function () {
                 transitionInEasing: 'linear',
                   transitionOutEasing: 'linear',
             });
+            // Force Home as the initial tab (helps some mobile browsers)
+            $('#ajax-tab-container').easytabs('select', '#home');
         }
     });
 
@@ -197,7 +199,6 @@ $(window).load(function () {
 
 
 }); // window load end 
-
 
 
 
