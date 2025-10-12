@@ -99,6 +99,16 @@
                     </ul>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-8 dynamic">
+                    <!-- Language Picker -->
+                    <div class="language-picker pull-right">
+                        <label for="language-select" class="sr-only">Language</label>
+                        <i class="fa fa-globe" aria-hidden="true" style="margin-right:6px;"></i>
+                        <select id="language-select" aria-label="Select language">
+                            <option value="en">English</option>
+                            <option value="it">Italiano</option>
+                            <option value="nl">Nederlands</option>
+                        </select>
+                    </div>
                     <a class="pull-right site-btn icon hidden-xs" href="mailto:sarwary.hafiz@gmail.com?subject=Project%20inquiry%20from%20portfolio">
                         Hire Me <i class="fa fa-paper-plane" aria-hidden="true"></i>
                     </a>
@@ -523,6 +533,86 @@ Today, my focus is on using GIS, remote sensing, and data analysis to tackle cha
 <script src="js/jquery.cookie-1.4.1.min.js"></script>
 <script src="js/Demo.js"></script>
 <link rel="stylesheet" href="css/Demo.min.css" />
+<!-- Google Translate (language picker support) -->
+<div id="google_translate_element" style="display:none;"></div>
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,it,nl',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  (function() {
+    function triggerTranslate(lang) {
+      var combo = document.querySelector('select.goog-te-combo');
+      if (!combo) return false;
+      combo.value = lang;
+      // fire change event
+      var event = document.createEvent('HTMLEvents');
+      event.initEvent('change', true, true);
+      combo.dispatchEvent(event);
+      return true;
+    }
+
+    function getCookieLang() {
+      var m = document.cookie.match(/(?:^|; )googtrans=\/[^/]+\/([^;]+)/);
+      return m ? decodeURIComponent(m[1]) : 'en';
+    }
+
+    function clearTranslateCookies() {
+      var domain = window.location.hostname;
+      var expires = 'Thu, 01 Jan 1970 00:00:01 GMT';
+      document.cookie = 'googtrans=; expires=' + expires + '; path=/';
+      document.cookie = 'googtrans=; expires=' + expires + '; path=/; domain=.' + domain;
+    }
+
+    // Sync dropdown with current language from cookie on load
+    document.addEventListener('DOMContentLoaded', function() {
+      var select = document.getElementById('language-select');
+      if (!select) return;
+      var current = getCookieLang();
+      if (["en","it","nl"].indexOf(current) !== -1) {
+        select.value = current;
+      }
+
+      select.addEventListener('change', function() {
+        var lang = this.value;
+        if (lang === 'en') {
+          clearTranslateCookies();
+          // If Google element exists, switch to EN then reload to fully reset
+          if (!triggerTranslate('en')) {
+            // wait for widget to load, then reset
+            var tries = 0;
+            var timer = setInterval(function(){
+              tries++;
+              if (triggerTranslate('en') || tries > 40) {
+                clearInterval(timer);
+                window.location.reload();
+              }
+            }, 250);
+          } else {
+            window.location.reload();
+          }
+          return;
+        }
+
+        // ensure widget is ready, then switch
+        if (!triggerTranslate(lang)) {
+          var attempts = 0;
+          var intv = setInterval(function(){
+            attempts++;
+            if (triggerTranslate(lang) || attempts > 40) {
+              clearInterval(intv);
+            }
+          }, 250);
+        }
+      });
+    });
+  })();
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
  
 
 </body>
