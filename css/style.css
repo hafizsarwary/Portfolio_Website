@@ -493,22 +493,43 @@ header nav{
 }
 
 /* Language picker (header) */
-.language-picker{ display:inline-flex; align-items:center; gap:6px; height:70px; margin-right:10px; }
+.language-picker{ display:inline-flex; align-items:end; gap:6px; height:70px; margin-right:10px; }
 .language-picker i{ color:#777; }
 .language-picker select{
     border: 1px solid #e6e6e6;
     border-radius: 20px;
-    padding: 6px 22px 6px 10px;
+    padding: 6px 15px 6px 10px;
     background: #f8f8f8;
     font-size: 13px;
     color: #333;
     outline: none;
-    max-width: 150px;
+    max-width: 100px;
 }
 @media (max-width: 767px){
-  .language-picker{ height:auto; margin-top:10px; margin-right:0; float:none !important; display:block; }
-  .language-picker select{ width:100%; max-width:none; }
+  header nav{ line-height:56px; }
+  header nav{ position: relative; }
+  header nav a.home-btn{ height:56px; line-height:56px; }
+  /* Keep items on one row and space between language and hamburger */
+  .dynamic{ display:flex; align-items:center; justify-content:flex-end; flex-wrap:nowrap; gap:8px; }
+  .dynamic .social-icons{ display:none !important; }
+  /* Float language control at bottom center on mobile */
+  .language-picker{ 
+    order:0; position: fixed; bottom: 12px; left: 50%; transform: translateX(-50%);
+    height:auto; margin:0; padding: 4px; display:inline-flex; align-items:center; 
+    z-index: 1100; float:none !important; background:#fff; border-radius:22px; 
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12); border: 1px solid #ececec;
+  }
+  .language-picker i{ display:none !important; }
+  .language-picker select{ width:auto; max-width:220px; font-size:13px; padding:6px 18px 6px 10px; border-radius:18px; }
+  .dynamic .hamburger{ order:1; margin-left:0; position:relative; z-index:3; }
 }
+
+/* Language prompt modal */
+.lang-modal{ display:none; position:fixed; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.35); z-index: 2000; align-items:center; justify-content:center; padding:16px; }
+.lang-modal.open{ display:flex; }
+.lang-modal .box{ background:#fff; border-radius:12px; max-width:360px; width:100%; padding:16px; box-shadow: 0 10px 32px rgba(0,0,0,0.15); }
+.lang-modal .options{ display:flex; gap:8px; margin-top:12px; }
+.lang-modal button{ flex:1; border:1px solid #e6e6e6; border-radius:20px; padding:8px 12px; background:#f7f7f7; font-size:14px; }
 
 header nav ul li{
     float: left;

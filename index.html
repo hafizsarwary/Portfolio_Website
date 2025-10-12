@@ -22,6 +22,7 @@
 <link rel="stylesheet" href="css/owl.theme.css"/> 
 <link rel="stylesheet" href="css/owl.carousel.css"/>
 <link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="css/lang.css"/>
 <link rel="stylesheet" href="css/colors/yellow.css" id="color"/>
 
     
@@ -523,6 +524,19 @@ Today, my focus is on using GIS, remote sensing, and data analysis to tackle cha
 
 <!-- Javascripts
 ================================================== -->  
+<!-- Mobile language prompt (first visit) -->
+<div id="lang-modal" class="lang-modal" aria-hidden="true" role="dialog" aria-label="Choose language">
+  <div class="box">
+    <div class="section-title bottom_15"><span></span><h2>Choose Language</h2></div>
+    <p class="little-text">Select your preferred language:</p>
+    <div class="options">
+      <button type="button" data-lang="en">English</button>
+      <button type="button" data-lang="it">Italiano</button>
+      <button type="button" data-lang="nl">Nederlands</button>
+    </div>
+  </div>
+  </div>
+
 <script src="js/jquery-2.1.4.min.js"></script> 
 <script src="cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
 <script src="js/bootstrap.min.js"></script> 
@@ -609,6 +623,40 @@ Today, my focus is on using GIS, remote sensing, and data analysis to tackle cha
           }, 250);
         }
       });
+
+      // First-visit language prompt (mobile only)
+      var isMobile = window.matchMedia('(max-width: 767px)').matches;
+      var prompted = '1';
+      try { prompted = localStorage.getItem('lang_pref_prompted') || ''; } catch(e) {}
+      if (isMobile && !prompted) {
+        var modal = document.getElementById('lang-modal');
+        if (modal) {
+          modal.classList.add('open');
+          modal.setAttribute('aria-hidden','false');
+          var buttons = modal.querySelectorAll('button[data-lang]');
+          for (var i=0;i<buttons.length;i++){
+            buttons[i].addEventListener('click', function(){
+              var lang = this.getAttribute('data-lang');
+              try { localStorage.setItem('lang_pref_prompted','1'); } catch(e) {}
+              modal.classList.remove('open');
+              modal.setAttribute('aria-hidden','true');
+              if (lang === 'en') {
+                clearTranslateCookies();
+                if (!triggerTranslate('en')) {
+                  var tries=0, t=setInterval(function(){ tries++; if (triggerTranslate('en')||tries>20){ clearInterval(t); window.location.reload(); } }, 200);
+                } else {
+                  window.location.reload();
+                }
+              } else {
+                if (select) select.value = lang;
+                if (!triggerTranslate(lang)) {
+                  var attempts=0, intv=setInterval(function(){ attempts++; if (triggerTranslate(lang)||attempts>20){ clearInterval(intv);} }, 200);
+                }
+              }
+            });
+          }
+        }
+      }
     });
   })();
 </script>
