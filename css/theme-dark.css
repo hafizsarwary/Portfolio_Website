@@ -19,6 +19,8 @@ html.theme-dark .cbp-l-loadMore-button .site-btn {
   color: #e6e6e6;
   box-shadow: 0 2px 32px rgba(0,0,0,0.35) !important;
 }
+/* Light background utility section in light theme */
+html.theme-dark section.graybg{ background:#12151a !important; }
 
 /* Text colors */
 html.theme-dark p,
@@ -36,14 +38,35 @@ html.theme-dark .section-title h5 {
   color: #eef1f5 !important;
 }
 
+/* Generic links and interactive text */
+html.theme-dark a { color: #cfe1ff; }
+html.theme-dark a:hover, html.theme-dark a:focus { color: #dbe8ff; }
+
 /* Nav links */
 html.theme-dark header nav ul li a { color: #f0f0f0 !important; }
 html.theme-dark header nav a.home-btn { color: #fff !important; }
+html.theme-dark header nav .hamburger { color: #f0f0f0 !important; }
+
+/* Titles and labels often forced to black in light theme */
+html.theme-dark .blog-title,
+html.theme-dark .timeline-title,
+html.theme-dark .timeline li .line-title,
+html.theme-dark .service span.title,
+html.theme-dark .page-title i,
+html.theme-dark .section-title i,
+html.theme-dark .profile .name,
+html.theme-dark .profile .job,
+html.theme-dark .skill-list h3,
+html.theme-dark .category,
+html.theme-dark .title {
+  color: #e9edf2 !important;
+}
 
 /* Borders and separators */
 html.theme-dark hr { background: #2b2f36 !important; }
 html.theme-dark ul.profile-information li { border-left-color: #2b2f36 !important; }
 html.theme-dark .timeline li { border-left-color: #2b2f36 !important; }
+html.theme-dark header nav ul li a:after{ border-right-color: #2b2f36 !important; }
 
 /* Inputs */
 html.theme-dark .site-input,
@@ -52,6 +75,10 @@ html.theme-dark .site-area {
   color: #e6e6e6 !important;
   border: 1px solid #2b2f36 !important;
 }
+
+/* Icons and chips */
+html.theme-dark .service .icon { color:#ddd !important; }
+html.theme-dark .social-icons i { color:#e6e6e6; }
 
 /* Footer */
 html.theme-dark footer .footer { color: #cfd6dd; }
@@ -62,4 +89,9 @@ html.theme-dark .language-picker select { background:#15181d; color:#e6e6e6; }
 
 /* Buttons keep accent; ensure readable icon chip */
 html.theme-dark .site-btn.icon i { color:#000; background:#fff; }
+html.theme-dark .theme-toggle{ background:#1a1d22; border-color:#2b2f36; }
+html.theme-dark .theme-toggle i{ color:#e6e6e6; }
 
+/* Specific spans used as labels in info lists */
+html.theme-dark ul.profile-information li span { color: #f1f5f9 !important; }
+html.theme-dark .contact-info ul li span { color: #f1f5f9 !important; }

@@ -97,6 +97,10 @@
                         <li class="tab"><a href="#blog">BLOG</a></li>
                         <li class="tab"><a href="#contact">CONTACT</a></li>
                     </ul>
+                    <!-- Theme toggle placed visually beside Contact (desktop only) -->
+                    <button class="theme-toggle hidden-xs hidden-sm" aria-label="Toggle dark mode" title="Toggle Dark/Light">
+                        <i class="fa fa-moon-o" aria-hidden="true"></i>
+                    </button>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-8 dynamic">
                     <!-- Language Picker -->
@@ -109,6 +113,10 @@
                             <option value="nl">Nederlands</option>
                         </select>
                     </div>
+                    <!-- Mobile-only theme toggle (centered via CSS) -->
+                    <button class="theme-toggle pull-right hidden-md hidden-lg" aria-label="Toggle dark mode" title="Toggle Dark/Light">
+                        <i class="fa fa-moon-o" aria-hidden="true"></i>
+                    </button>
                     <a class="pull-right site-btn icon hidden-xs" href="mailto:sarwary.hafiz@gmail.com?subject=Project%20inquiry%20from%20portfolio">
                         Hire Me <i class="fa fa-paper-plane" aria-hidden="true"></i>
                     </a>
@@ -460,28 +468,8 @@ Today, my focus is on using GIS, remote sensing, and data analysis to tackle cha
             ================================================== --> 
             <div id="contact">
                 <div class="row">
-                    <!-- Contact Form -->
-                    <section class="contact-form col-md-6 padding_30 padbot_45">
-                        <div class="section-title top_15 bottom_30"><span></span><h2>Contact Form</h2></div>
-                        <form class="site-form">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <input class="site-input" placeholder="Name">
-                                </div>
-                                <div class="col-md-6">
-                                    <input class="site-input" placeholder="E-mail">
-                                </div>
-                                <div class="col-md-12">
-                                    <textarea class="site-area" placeholder="Message"></textarea>
-                                </div>
-                                <div class="col-md-12 top_15 bottom_30">
-                                    <button class="site-btn" type="submit">Submit</button>
-                                </div>
-                            </div>
-                        </form>  
-                    </section>
                     <!-- Contact Informations -->
-                    <section class="contact-info col-md-6 padding_30 padbot_45">
+                    <section class="contact-info col-md-12 padding_30 padbot_45">
                         <div class="section-title top_15 bottom_30"><span></span><h2>Contact Informations</h2></div>
                         <ul>
                             <li><span>Address:</span> Earth</li>
@@ -495,15 +483,6 @@ Today, my focus is on using GIS, remote sensing, and data analysis to tackle cha
                             </li>
                         </ul>
                     </section>
-                    <!-- Contact Map -->
-                    <section class="contact-map col-md-12 top_15 bottom_15">
-                        <div class="section-title bottom_30"><span></span><h2>Contact Map.</h2></div>  
-                        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=9.21727%2C45.46813%2C9.23727%2C45.48813&layer=mapnik&marker=45.47813%2C9.22727" width="100%" height="350" style="border:0" loading="lazy" allowfullscreen></iframe>
-                        <small><a href="https://www.openstreetmap.org/?mlat=45.47813&mlon=9.22727#map=16/45.47813/9.22727" target="_blank" rel="noopener">View on OpenStreetMap</a></small>
-                    </section>
-                </div>
-            </div>
-            
         </div><!-- Content - End -->
      </div> <!-- col-md-12 end -->
 </div><!-- row end -->

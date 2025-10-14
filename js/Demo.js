@@ -19,13 +19,36 @@ $(document).ready(function () {
     }
     var savedTheme = $.cookie('theme');
     if(savedTheme){ applyTheme(savedTheme); }
+
+    function updateThemeIcon(){
+        var isDark = $('html').hasClass('theme-dark');
+        var $icon = $('.theme-toggle i');
+        if($icon.length){
+            $icon.removeClass('fa-moon-o fa-sun-o').addClass(isDark ? 'fa-sun-o' : 'fa-moon-o');
+        }
+    }
+    updateThemeIcon();
     $(document).on('click', '.demo .mode', function(e){
         e.preventDefault();
         var mode = $(this).data('mode');
         $.cookie('theme', mode, { expires: 365, path: '/' });
         applyTheme(mode);
+        updateThemeIcon();
         $('.demo .mode').removeClass('active');
         $(this).addClass('active');
+    });
+
+    // One-tap toggle in header
+    $(document).on('click', '.theme-toggle', function(e){
+        e.preventDefault();
+        var isDark = $('html').hasClass('theme-dark');
+        var next = isDark ? 'light' : 'dark';
+        $.cookie('theme', next, { expires: 365, path: '/' });
+        applyTheme(next);
+        updateThemeIcon();
+        // reflect state in demo panel buttons if open
+        $('.demo .mode').removeClass('active');
+        $('.demo .mode[data-mode="'+next+'"]').addClass('active');
     });
 
     if ($.cookie('box')) {
@@ -63,24 +86,14 @@ $(document).ready(function () {
         $.removeCookie('background', { path: '/' });
     });
 
-    var html = '' +
-        '<div class="demo">' +
-        '<a href="#" class="settings">' +
-        '<i class="fa fa-cog fa-spin"></i>' +
-        '</a>' +
-        '<h5>Theme</h5>' +
-        '<div class="theme-choices">' +
-        '<a href="#" class="mode btn btn-sm btn-default" data-mode="light">Light</a>' +
-        '<a href="#" class="mode btn btn-sm btn-default" data-mode="dark">Dark</a>' +
-        '</div>' +
-        '<hr />' +
-        '<a href="#" class="reset btn btn-sm btn-info p-l-30 p-r-30">Reset</a>' +
-        '</div>';
-    $('body').append(html);
+    // Remove legacy color/theme demo panel UI (not used anymore)
+    // Intentionally not appending the floating demo panel.
     // reflect active theme in UI
+    // Reflect state only if demo panel exists
     if(savedTheme === 'dark'){
         $('.demo .mode[data-mode="dark"]').addClass('active');
     } else {
         $('.demo .mode[data-mode="light"]').addClass('active');
     }
+    updateThemeIcon();
 });
