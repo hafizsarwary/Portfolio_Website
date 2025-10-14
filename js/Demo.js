@@ -9,13 +9,23 @@ $(document).ready(function () {
         }
     });
 
-    if ($.cookie('color')) {
-        $('#color').attr('href', 'css/colors/' + $.cookie('color'));
+    // Theme init (light/dark)
+    function applyTheme(mode){
+        if(mode === 'dark'){
+            $('html').addClass('theme-dark');
+        }else{
+            $('html').removeClass('theme-dark');
+        }
     }
-    $(document).on('click', '.demo .color',function (e) {
+    var savedTheme = $.cookie('theme');
+    if(savedTheme){ applyTheme(savedTheme); }
+    $(document).on('click', '.demo .mode', function(e){
         e.preventDefault();
-        $.cookie('color', $(this).data('color'), { expires: 7, path: '/' });
-        $('#color').attr('href', 'css/colors/' + $(this).data('color'));
+        var mode = $(this).data('mode');
+        $.cookie('theme', mode, { expires: 365, path: '/' });
+        applyTheme(mode);
+        $('.demo .mode').removeClass('active');
+        $(this).addClass('active');
     });
 
     if ($.cookie('box')) {
@@ -45,8 +55,10 @@ $(document).ready(function () {
         e.preventDefault();
         $('#color').attr('href', 'css/colors/yellow.css');
         $('html').removeClass('boxed');
+        $('html').removeClass('theme-dark');
         $('body').removeAttr('style');
         $.removeCookie('color', { path: '/' });
+        $.removeCookie('theme', { path: '/' });
         $.removeCookie('box', { path: '/' });
         $.removeCookie('background', { path: '/' });
     });
@@ -56,19 +68,19 @@ $(document).ready(function () {
         '<a href="#" class="settings">' +
         '<i class="fa fa-cog fa-spin"></i>' +
         '</a>' +
-        '<h5>SELECT A COLOR</h5>' +
-        '<a href="#" class="color" data-color="yellow.css" style="background-color:#ffb100"></a>' +
-        '<a href="#" class="color" data-color="green2.css" style="background-color:#52bf00"></a>' +
-        '<a href="#" class="color" data-color="red.css" style="background-color:#d81300"></a>' +
-        '<a href="#" class="color" data-color="blue.css" style="background-color:#425cbb"></a>' +
-        '<a href="#" class="color" data-color="Purple.css" style="background-color:#BF55EC"></a>' +
-        '<a href="#" class="color" data-color="turquoise.css" style="background-color:#00b4d9"></a>' +
-        '<a href="#" class="color" data-color="green.css" style="background-color:#029A83"></a>' +
-        '<a href="#" class="color" data-color="pink.css" style="background-color:#f62459"></a>' +
-        '<a href="#" class="color" data-color="orange.css" style="background-color:#ff5a14"></a>' +
-        '<a href="#" class="color" data-color="grey.css" style="background-color:#ABB7B7"></a>' +
+        '<h5>Theme</h5>' +
+        '<div class="theme-choices">' +
+        '<a href="#" class="mode btn btn-sm btn-default" data-mode="light">Light</a>' +
+        '<a href="#" class="mode btn btn-sm btn-default" data-mode="dark">Dark</a>' +
+        '</div>' +
         '<hr />' +
         '<a href="#" class="reset btn btn-sm btn-info p-l-30 p-r-30">Reset</a>' +
         '</div>';
     $('body').append(html);
+    // reflect active theme in UI
+    if(savedTheme === 'dark'){
+        $('.demo .mode[data-mode="dark"]').addClass('active');
+    } else {
+        $('.demo .mode[data-mode="light"]').addClass('active');
+    }
 });

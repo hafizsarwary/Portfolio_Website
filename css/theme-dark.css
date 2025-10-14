@@ -1,0 +1,65 @@
+/* Scoped dark theme overrides. Apply when <html> has class 'theme-dark'. */
+
+html.theme-dark, html.theme-dark body {
+  background: #0f1115 !important;
+  background-image: none !important;
+  color: #e6e6e6;
+}
+
+/* Containers and cards */
+html.theme-dark #content,
+html.theme-dark .profile,
+html.theme-dark header nav,
+html.theme-dark .services .service,
+html.theme-dark .blog-box-info,
+html.theme-dark .contact-form,
+html.theme-dark .contact-info,
+html.theme-dark .cbp-l-loadMore-button .site-btn {
+  background: #171a1f !important;
+  color: #e6e6e6;
+  box-shadow: 0 2px 32px rgba(0,0,0,0.35) !important;
+}
+
+/* Text colors */
+html.theme-dark p,
+html.theme-dark .little-text,
+html.theme-dark .timeline-title,
+html.theme-dark .service p.little-text {
+  color: #c8cdd4 !important;
+}
+
+html.theme-dark h1, html.theme-dark h2, html.theme-dark h3,
+html.theme-dark h4, html.theme-dark h5, html.theme-dark h6,
+html.theme-dark .section-title h1, html.theme-dark .section-title h2,
+html.theme-dark .section-title h3, html.theme-dark .section-title h4,
+html.theme-dark .section-title h5 {
+  color: #eef1f5 !important;
+}
+
+/* Nav links */
+html.theme-dark header nav ul li a { color: #f0f0f0 !important; }
+html.theme-dark header nav a.home-btn { color: #fff !important; }
+
+/* Borders and separators */
+html.theme-dark hr { background: #2b2f36 !important; }
+html.theme-dark ul.profile-information li { border-left-color: #2b2f36 !important; }
+html.theme-dark .timeline li { border-left-color: #2b2f36 !important; }
+
+/* Inputs */
+html.theme-dark .site-input,
+html.theme-dark .site-area {
+  background: #111419 !important;
+  color: #e6e6e6 !important;
+  border: 1px solid #2b2f36 !important;
+}
+
+/* Footer */
+html.theme-dark footer .footer { color: #cfd6dd; }
+
+/* Language picker pill */
+html.theme-dark .language-picker { background:#1a1d22; border-color:#2b2f36; }
+html.theme-dark .language-picker select { background:#15181d; color:#e6e6e6; }
+
+/* Buttons keep accent; ensure readable icon chip */
+html.theme-dark .site-btn.icon i { color:#000; background:#fff; }
+
