@@ -62,6 +62,11 @@ html.theme-dark .title {
   color: #e9edf2 !important;
 }
 
+/* Ensure secondary informational text is readable on dark */
+html.theme-dark .info {
+  color: #c8cdd4 !important;
+}
+
 /* Borders and separators */
 html.theme-dark hr { background: #2b2f36 !important; }
 html.theme-dark ul.profile-information li { border-left-color: #2b2f36 !important; }
@@ -80,6 +85,17 @@ html.theme-dark .site-area {
 html.theme-dark .service .icon { color:#ddd !important; }
 html.theme-dark .social-icons i { color:#e6e6e6; }
 
+/* Services icons: improve contrast in dark mode */
+html.theme-dark .services .service .icon{
+  background:#eef2f7 !important; /* light tile behind glyph */
+  color:#4b5d73 !important;       /* darker glyph for contrast */
+  box-shadow:none !important;
+}
+html.theme-dark .services .service:hover .icon{
+  background:#e6edf7 !important;
+  color:#365a7a !important;
+}
+
 /* Footer */
 html.theme-dark footer .footer { color: #cfd6dd; }
 
@@ -95,3 +111,17 @@ html.theme-dark .theme-toggle i{ color:#e6e6e6; }
 /* Specific spans used as labels in info lists */
 html.theme-dark ul.profile-information li span { color: #f1f5f9 !important; }
 html.theme-dark .contact-info ul li span { color: #f1f5f9 !important; }
+
+/* Text-only project cards inserted without images */
+html.theme-dark .project-box{
+  background:#1b1f26 !important;
+  border-color:#2b2f36 !important;
+  color:#e6e6e6 !important;
+}
+html.theme-dark .project-box .title{ color:#eef1f5 !important; }
+html.theme-dark .project-box .info{ color:#c8cdd4 !important; }
+
+/* Portfolio figcaption tweaks for contrast on dark */
+html.theme-dark #portfolio .cbp-item figcaption .title{ color:#eef1f5 !important; }
+html.theme-dark #portfolio .cbp-item figcaption .info{ color:#c8cdd4 !important; }
+html.theme-dark #portfolio #filters-container .cbp-filter-item{ color:#cfd6dd !important; }
