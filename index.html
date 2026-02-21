@@ -1,798 +1,321 @@
 <!doctype html>
 <html lang="en">
 <head>
-
-<!-- Simple Page Needs
-================================================== -->
-<title>Hafizullah Sarwary Portfolio</title>
 <meta charset="UTF-8">
-<meta name="description" content="Geoinformatics Engineer">
-<meta name="keywords" content="GIS, Analyst, portfolio">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-<!-- Favicon
-================================================== -->  
-<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
-<!-- CSS
-================================================== -->
-<link rel="stylesheet" href="css/bootstrap.css"/>
-<link rel="stylesheet" href="css/reset.css"/>
-<link rel="stylesheet" href="cubeportfolio/css/cubeportfolio.min.css"/>
-<link rel="stylesheet" href="css/owl.theme.css"/> 
-<link rel="stylesheet" href="css/owl.carousel.css"/>
-<link rel="stylesheet" href="css/style.css"/>
-<link rel="stylesheet" href="css/lang.css"/>
-<link rel="stylesheet" href="css/colors/yellow.css" id="color"/>
-<link rel="stylesheet" href="css/theme-dark.css"/>
-
-    
-<!-- Google Web fonts
-================================================== --> 
-<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
-
-<!-- Font Icons
-================================================== --> 
-<link rel="stylesheet" href="icon-fonts/font-awesome-4.7.0/css/font-awesome.min.css"/>
-<link rel="stylesheet" href="icon-fonts/web-design/flaticon.css" />
-
-<!--[if lt IE 9]>
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-
-</head>
-<body>
- <!-- Preloading -->
-<div id="preloader">
-    <div class="spinner">
-    </div>
-</div>  
-    
-<!-- Wrapper --> 
-<div class="wrapper top_60 container">
-<div class="row">
-        
-<!-- Profile Section
-================================================== --> 
-<div class="col-lg-3 col-md-4">
-    <div class="profile">
-        <div class="profile-name">
-            <span class="name">Hafizullah Sarwary</span><br>
-        </div>
-        <figure class="profile-image">
-            <img src="images/profile.jpg" alt="">
-        </figure> 
-        <ul class="profile-information">
-            <li></li>
-            <li><p><span>Name:</span> Hafizullah Sarwary</p></li>
-            <li><p><span>Birthday:</span> 05 July 1994</p></li>
-            <li><p><span>Email:</span> sarwary.hafiz@gmail.com</p></li>
-        </ul>
-        <div class="col-md-12">
-            <a href="hafizullah_sarwary.pdf" download>
-                Download CV <i class="fa fa-download" aria-hidden="true"></i>
-            </button>
-        </a>
-        </div>
-    </div>
-</div>
-
-<!-- Page Tab Container Div -->   
-<div id="ajax-tab-container" class="col-lg-9 col-md-8 tab-container">
-    
-<!-- Header
-================================================== --> 
-<div class="row">
-    <header class="col-md-12">
-        <nav>
-            <div class="row">
-                <!-- navigation bar -->
-                <div class="col-md-8 col-sm-8 col-xs-4">
-                    <ul class="tabs">
-                        <li class="tab">
-                            <a class="home-btn" href="#home"><i class="fa fa-home" aria-hidden="true"></i></a>
-                        </li>
-                        <li class="tab"><a href="#resume">RESUME</a></li>
-                        <li class="tab"><a href="#portfolio">PROJECTS</a></li>
-                        <li class="tab"><a href="#blog">BLOG</a></li>
-                        <li class="tab"><a href="#contact">CONTACT</a></li>
-                    </ul>
-                    <!-- Theme toggle placed visually beside Contact (desktop only) -->
-                    <button class="theme-toggle hidden-xs hidden-sm" aria-label="Toggle dark mode" title="Toggle Dark/Light">
-                        <i class="fa fa-moon-o" aria-hidden="true"></i>
-                    </button>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-8 dynamic">
-                    <!-- Language Picker -->
-                    <div class="language-picker pull-right">
-                        <label for="language-select" class="sr-only">Language</label>
-                        <i class="fa fa-globe" aria-hidden="true" style="margin-right:6px;"></i>
-                        <select id="language-select" aria-label="Select language">
-                            <option value="en">English</option>
-                            <option value="it">Italiano</option>
-                            <option value="nl">Nederlands</option>
-                        </select>
-                    </div>
-                    <!-- Mobile-only theme toggle (centered via CSS) -->
-                    <button class="theme-toggle pull-right hidden-md hidden-lg" aria-label="Toggle dark mode" title="Toggle Dark/Light">
-                        <i class="fa fa-moon-o" aria-hidden="true"></i>
-                    </button>
-                    <a class="pull-right site-btn icon hidden-xs" href="mailto:sarwary.hafiz@gmail.com?subject=Project%20inquiry%20from%20portfolio">
-                        Email <i class="fa fa-paper-plane" aria-hidden="true"></i>
-                    </a>
-                    <div class="hamburger pull-right hidden-lg hidden-md"><i class="fa fa-bars" aria-hidden="true"></i></div>
-                    <div class="hidden-md social-icons pull-right"> 
-                        <a class="gh" href="https://github.com/hafizsarwary" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i></a> 
-                        <a class="li" href="https://www.linkedin.com/in/hafizullah-sarwary-a16b26154/" target="_blank" rel="noopener"><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-        
-    <!-- Page Content
-    ================================================== --> 
-    <div class="col-md-12">
-        <div id="content" class="panel-container">
-          
-            <!-- Home Page
-            ================================================== -->  
-            <div id="home">
-                <!-- Text Section -->
-                <div class="row">
-                    <section class="about-me line col-md-12 padding_30 padbot_45">
-                    <div class="section-title"><span></span><h2>About Me</h2></div>
-                    <p class="top_30">Hi, I’m Hafizullah Sarwary, and I'm a passionate Geoinformatics Engineer currently completing my Master's at Politecnico di Milano. My real-world foundation comes from spending over six years tackling infrastructure challenges at DABS, where I specialized in making huge transmission projects happen—everything from topographic surveys and route planning to creating detailed GIS maps and running terrain analysis.
-
-Now, my focus is on the cutting edge of research. My Master's projects at POLIMI have been all about applying advanced techniques: visualizing air quality, building flood risk models, analyzing urbanization trends, and even using machine learning with satellite imagery for soil classification. Ultimately, I'm driven to connect GIS, Remote Sensing, and Data Science to deliver tangible, sustainable solutions for the future of urban life, energy planning, and environmental resilience. </p>
-                </section>
-                </div>
-                
-                <!-- Service Detail Modal -->
-                <div class="modal fade" id="serviceModal" tabindex="-1" role="dialog" aria-labelledby="serviceModalLabel">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="serviceModalLabel"><i class="flaticon-grid" aria-hidden="true"></i> <span class="title-text"></span></h4>
-                            </div>
-                            <div class="modal-body"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- My Services Section -->
-                <div class="row">
-                    <section class="services line graybg col-md-12 padding_50 padbot_50">
-                    <div class="section-title bottom_45"><span></span><h2>My Expertise</h2></div>
-                    <div class="services-grid">
-                        <!-- a service -->
-                        <div class="service-col">
-                            <div class="service">
-                                <div class="icon">
-                                    <i class="flaticon-grid" aria-hidden="true"></i>
-                                </div>
-                                <span class="title">GIS & Spatial Data Analysis</span>
-                                <p class="little-text">Advanced experience in spatial analysis, cartography, and GIS-based decision support using ArcGIS, QGIS, and Python. Skilled in integrating multi-source data for urban, environmental, and infrastructure planning.</p>
-                            </div>
-                        </div>
-                        <!-- a service -->
-                        <div class="service-col">
-                            <div class="service">
-                                <div class="icon">
-                                    <i class="flaticon-image" aria-hidden="true"></i>
-                                </div>
-                                <span class="title">Remote Sensing & Earth Observation</span>
-                                <p class="little-text">Proficient in processing and analyzing satellite imagery (Sentinel, Landsat, ASTER) for land use mapping, flood modeling, soil classification, and environmental monitoring.</p>
-                            </div>
-                        </div>
-                        <!-- a service -->
-                        <div class="service-col">
-                            <div class="service">
-                                <div class="icon">
-                                    <i class="flaticon-compass" aria-hidden="true"></i>
-                                </div>
-                                <span class="title">Surveying & Infrastructure Mapping</span>
-                                <p class="little-text">Hands-on experience with topographic, route, and contour surveys for transmission line and substation projects. Strong understanding of terrain modeling, alignment design, and project implementation.</p>
-                            </div>
-                        </div>
-                        <!-- a service -->
-                        <div class="service-col">
-                            <div class="service">
-                                <div class="icon">
-                                    <i class="flaticon-analysis" aria-hidden="true"></i>
-                                </div>
-                                <span class="title">Data Management & Geospatial Visualization</span>
-                                <p class="little-text">Experienced in managing geospatial databases, building interactive dashboards and WebGIS applications for data visualization, monitoring, and analysis.</p>
-                            </div>
-                        </div>
-                        <!-- a service (added) -->
-                        <div class="service-col">
-                            <div class="service">
-                                <div class="icon">
-                                    <i class="flaticon-settings" aria-hidden="true"></i>
-                                </div>
-                                <span class="title">Geospatial App Development</span>
-                                <p class="little-text">Building custom WebGIS and automation tools using Python, Leaflet/Mapbox, and REST APIs to streamline spatial workflows and deliver user-friendly mapping solutions.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                </div>
-                <!-- Skills Section -->
-                <div class="row">
-                    <section class="design-skills col-md-6 padding_60 padbot_50">
-                        <div class="section-title bottom_45"><span></span><h2>GIS & Remote Sensing Skills</h2></div>
-                        <ul class="skill-list">
-                            <li> 
-                                <h3>ArcGIS / ArcGIS Pro</h3>
-                                <div class="progress">
-                                    <div class="percentage" style="width:90%;"></div>
-                                </div>
-                            </li>
-                            <li> 
-                                <h3>QGIS</h3>
-                                <div class="progress">
-                                    <div class="percentage" style="width:90%;"></div>
-                                </div>
-                            </li>
-                            <li> 
-                                <h3>Google Earth Engine</h3>
-                                <div class="progress">
-                                    <div class="percentage" style="width:80%;"></div>
-                                </div>
-                            </li>
-                        </ul>
-                    </section>
-                    <section class="code-skills col-md-6 padding_60">
-                        <div class="section-title bottom_45"><span></span><h2>Technical &amp; Programming Skills</h2></div>
-                        <ul class="skill-list">
-                            <li>
-                                <h3>Python (pandas, GeoPandas, rasterio, matplotlib)</h3>
-                                <div class="progress">
-                                    <div class="percentage" style="width:80%;"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <h3>SQL / PostGIS</h3>
-                                <div class="progress">
-                                    <div class="percentage" style="width:70%;"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <h3>HTML / CSS / JavaScript</h3>
-                                <div class="progress">
-                                    <div class="percentage" style="width:65%;"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <h3>AutoCAD / Civil 3D</h3>
-                                <div class="progress">
-                                    <div class="percentage" style="width:65%;"></div>
-                                </div>
-                            </li>
-                        </ul>
-                    </section>
-                </div>
-            </div>
-            
-            <!-- Resume Page
-            ================================================== --> 
-            <div id="resume">
-                <!-- Resume Section -->
-                <div class="row">
-                    <section class="education">
-                    <div class="section-title top_30"><span></span><h2>Resume</h2></div>
-                        <div class="row">
-                            <!-- Working History -->
-                            <div class="working-history col-md-6 padding_15 padbot_30">
-                                <ul class="timeline col-md-12 top_30">
-                                    <li><i class="fa fa-suitcase" aria-hidden="true"></i><h2 class="timeline-title">Working History</h2></li>
-                                    <!-- a work -->
-                                    <li>
-                                        <h3 class="line-title">GIS Expert – DABS‑PIU, Kabul</h3>
-                                        <span>Mar 2019 – July 2023</span>
-                                        <p class="little-text">Lead the GIS unit for Afghanistan’s energy sector. Built and maintain a national energy/electricity geodatabase covering transmission lines, substations and distribution networks across 34 provinces; converted CAD/Civil3D data to GIS and UTM; coordinated with sector stakeholders; established update standards; delivered GPS/GIS trainings and technical recommendations.</p>
-                                    </li>
-                                    <!-- a work -->
-                                    <li>
-                                        <h3 class="line-title">GIS/Survey Engineer – WB‑PIU with DABS, Kabul</h3>
-                                        <span>Feb 2018 – Mar 2019</span>
-                                        <p class="little-text">Managed project geodata and geodatabases; produced base and thematic maps; performed georeferencing, image classification and hydrology analysis; prepared topographic/slope and planning maps; synchronized ESRI datasets with Google Earth; provided short trainings and supported field/topographic surveys.</p>
-                                    </li>
-                                    <!-- a work -->
-                                    <li>
-                                        <h3 class="line-title">GIS/Survey Engineer – USAID (G to G) with DABS, Ghazni</h3>
-                                        <span>Sep 2016 – Feb 2018</span>
-                                        <p class="little-text">Developed geodatabases and base maps for provincial projects; conducted georeferencing and image classification; prepared country/provincial/district maps; trained staff in GPS, Total Station and GIS; mapped road networks and produced profiles for planning.</p>
-                                    </li>
-                                    <!-- a work -->
-                                    <li>
-                                        <h3 class="line-title">Draftsman – East Power Engineering Services, Kabul</h3>
-                                        <span>Jan 2015 – Sep 2016</span>
-                                        <p class="little-text">Handled GIS and AutoCAD layouts; downloaded/processed SRTM and ancillary data; produced land‑use/land‑cover and hydrology maps; initiated automated image classification and impact estimations; supported designers with data for structures and culverts.</p>
-                                    </li>
-                                </ul> 
-                            </div>  
-                            <!-- Education History -->
-                            <div class="education-history col-md-6 padding_15 padbot_30">
-                                <ul class="timeline col-md-12 top_30">
-                                    <li><i class="fa fa-graduation-cap" aria-hidden="true"></i><h2 class="timeline-title">Education History</h2></li>
-                                    <!-- MSc -->
-                                    <li>
-                                        <h3 class="line-title">MSc, Geoinformatics (in progress) – Politecnico di Milano</h3>
-                                        <span>2024 – Present</span>
-                                        <p class="little-text">Selected coursework: Computer Architecture & Operating Systems, Data & Information Quality, Software Engineering for Geoinformatics (Python), Geoinformatics Project, Geospatial Data Analysis, Geographic Information Systems, Geospatial Processing, Positioning & Location‑Based Services, Pollution Measurements, and Subsurface Imaging & Detection.</p>
-                                    </li>
-                                    <!-- BSc -->
-                                    <li>
-                                        <h3 class="line-title">BSc in Geodesy Engineering – Kabul Polytechnic University</h3>
-                                        <span>2011 – 2015</span>
-                                        <p class="little-text">Focus: GIS, photogrammetry, topographic/cadastral surveying, geometric design, applied geodesy, astronomy, environmental protection, cartography, construction technology, and engineering software.</p>
-                                    </li>
-                                    <!-- High School -->
-                                    <li>
-                                        <h3 class="line-title">Baccalaureate Degree – Habibia High School</h3>
-                                        <span>2008 – 2010</span>
-                                        <p class="little-text">General secondary education with strong foundation in mathematics and science.</p>
-                                    </li>
-                                </ul> 
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-            <!-- Portfolio Page
-            ================================================== --> 
-            <div id="portfolio" class="row bottom_45">
-                <section class="col-md-12">
-                    <div class="col-md-12 content-header bottom_15">
-                        <div class="section-title top_30 bottom_30"><span></span><h2>Projects</h2></div>
-                        <div id="filters-container">
-                            <!-- '*' means shows all item elements -->
-                            <div data-filter="*" class="cbp-filter-item cbp-filter-item-active">All</div>
-                        </div>
-                    </div>
-                    <div id="grid-container" class="top_60">
-                        <!-- 1a work -->
-                        <div class="cbp-item webdesign">
-                            <a href="portfolio-detail/work-01.html" class=" cbp-singlePage">
-                                <figure>
-                                    <div class="icon">
-                                        <i class="fa fa-clone" aria-hidden="true"></i>
-                                    </div>
-                                    <img src="images/works/work-01.png" alt="" >
-                                    <figcaption>
-                                        <span class="title">Landslide Susceptibility Mapping</span><br/>
-                                        <span class="info">Created a WebGIS for visualizing landslide risk maps using QGIS, GeoServer, and web layers.</span>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                        </div>
-                        <!-- a video work -->
-
-                        <!-- Text-only projects (no images) -->
-                        <div class="cbp-item webdesign">
-                            <div class="project-box" style="background:#fafafa;border:1px solid #eee;padding:18px;border-radius:6px;">
-                                <span class="title">2025 (ongoing): GeoClearn – Python Library for Geospatial Data Cleaning</span><br/>
-                                <span class="info">Developing an open-source Python tool to automate the detection, fixing, and reporting of geometry and CRS errors in geospatial datasets using GeoPandas and Shapely. Under Development</span>
-                            </div>
-                        </div>
-                        <div class="cbp-item webdesign">
-                            <div class="project-box" style="background:#fafafa;border:1px solid #eee;padding:18px;border-radius:6px;">
-                                <span class="title">2025: Soil Texture Classification using Sentinel-2 &amp; Landsat-9</span><br/>
-                                <span class="info">Applied machine learning for soil mapping in Semnan, Iran, using Python and GIS tools. Under Development</span>
-                            </div>
-                        </div>
-                        <div class="cbp-item webdesign">
-                            <div class="project-box" style="background:#fafafa;border:1px solid #eee;padding:18px;border-radius:6px;">
-                                <span class="title">2025: Flood Risk &amp; Damage Assessment using SHUD &amp; Earth Observation</span><br/>
-                                <span class="info">Integrated the SHUD hydrological model with Sentinel data to simulate floods and assess insured asset damages for Unipol. Under Development</span>
-                            </div>
-                        </div>
-                        <div class="cbp-item webdesign">
-                            <div class="project-box" style="background:#fafafa;border:1px solid #eee;padding:18px;border-radius:6px;">
-                                <span class="title">2025: SE4G – Smart Environment for Green Growth (Lombardy, Italy)</span><br/>
-                                <span class="info">Developed an interactive air quality dashboard with real-time data, statistics, and role-based access. Under Development</span>
-                            </div>
-                        </div>
-                        <div class="cbp-item webdesign">
-                            <div class="project-box" style="background:#fafafa;border:1px solid #eee;padding:18px;border-radius:6px;">
-                                <span class="title">2024: Landslide Susceptibility Mapping – Northern Italy</span><br/>
-                                <span class="info">Created a WebGIS for visualizing landslide risk maps using QGIS and GeoServer. Under Development</span>
-                            </div>
-                        </div>
-                        <div class="cbp-item webdesign">
-                            <div class="project-box" style="background:#fafafa;border:1px solid #eee;padding:18px;border-radius:6px;">
-                                <span class="title">2024: Urbanization of Kabul (2001–2024)</span><br/>
-                                <span class="info">Analyzed satellite imagery with QGIS and ML to map urban growth and land-use change. Under Development</span>
-                            </div>
-                        </div>
-                        <div class="cbp-item webdesign">
-                            <div class="project-box" style="background:#fafafa;border:1px solid #eee;padding:18px;border-radius:6px;">
-                                <span class="title">2024: Environmental Change Detection – Kabul</span><br/>
-                                <span class="info">Calculated NDVI, NDWI, and temperature indices using Google Earth Engine for multi-temporal analysis. Under Development</span>
-                            </div>
-                        </div>
-                        <div class="cbp-item webdesign">
-                            <div class="project-box" style="background:#fafafa;border:1px solid #eee;padding:18px;border-radius:6px;">
-                                <span class="title">2024: Standard Point Positioning using Least Squares</span><br/>
-                                <span class="info">Processed GPS data and applied least-squares adjustment for precise geodetic positioning. Under Development</span>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- load more button -->
-                    <div id="js-loadMore-agency" class="cbp-l-loadMore-button top_30">
-                        <a href="load-more/portfolio.html" class="cbp-l-loadMore-link site-btn" rel="nofollow">
-                            <span class="cbp-l-loadMore-defaultText">Load More <span class="cbp-l-loadMore-loadItems"></span></span>
-                            <span class="cbp-l-loadMore-loadingText">Loading...</span>
-                            <span class="cbp-l-loadMore-noMoreLoading">No More Works</span>
-                        </a>
-                    </div>
-                </section>
-            </div>
-                
-            <!-- Blog Page
-            ================================================== --> 
-            <div id="blog">
-                <div class="row">
-                    <section class="blog col-md-12 bottom_30">
-                        <div class="col-md-12 content-header">
-                            <div class="section-title top_30 bottom_15"><span></span><h2>Blog Posts</h2></div>
-                        </div>
-                        <div id="grid-blog" class="row">
-                            <!-- a blog -->
-                            <div class="cbp-item">
-                                <a href="blog-posts/post-data-quality.html" class="blog-box">
-                                    <div class="blog-img">
-                                        <img src="images/blogs/blog-8.jpg" alt="">
-                                    </div>
-                                    <div class="blog-box-info">
-                                        <span class="category">Geospatial Data</span> 
-                                        <h2 class="title">Why data quality matters in maps</h2>
-                                        <p class="little-text">Easy checks we use to keep geodata accurate, current and usable.</p>
-                                        <span class="date">15 Oct 25</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- a blog -->
-                            <div class="cbp-item">
-                                <a href="blog-posts/post-insar-monitoring.html" class="blog-box">
-                                    <div class="blog-img">
-                                        <img src="images/blogs/blog.jpg" alt="">
-                                    </div>
-                                    <div class="blog-box-info">
-                                        <span class="category">Remote Sensing</span>
-                                        <h2 class="title">Beyond the Naked Eye: Satellite Data for Civil Monitoring</h2>
-                                        <p class="little-text">InSAR + GIS visualization brings millimeter-precision, wide-area asset monitoring.</p>
-                                        <span class="date">05 Oct 25</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- a blog -->
-                            <div class="cbp-item">
-                                <a href="blog-posts/post-ai-nbs-urban-planning.html" class="blog-box">
-                                    <div class="blog-img">
-                                        <img src="images/blogs/blog20.jpg" alt="">
-                                    </div>
-                                    <div class="blog-box-info">
-                                        <span class="category">AI &amp; Urban Planning</span>
-                                        <h2 class="title">Beyond Green Walls: AI + Nature-Based Cities</h2>
-                                        <p class="little-text">Generative AI co-designs greener, resilient cities with NBS.</p>
-                                        <span class="date">13 Sep 25</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- a blog -->
-                            <div class="cbp-item">
-                                <a href="blog-posts/post-python-geopandas.html" class="blog-box">
-                                    <div class="blog-img">
-                                        <img src="images/blogs/blog-5.jpg" alt="">
-                                    </div>
-                                    <div class="blog-box-info">
-                                        <span class="category">Python</span>
-                                        <h2 class="title">GeoPandas: turn shapefiles into answers</h2>
-                                        <p class="little-text">Read, reproject, join and export data with a few simple steps.</p>
-                                        <span class="date">10 Oct 25</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- a blog -->
-                            <div class="cbp-item">
-                                <a href="blog-posts/post-sentinel-floods.html" class="blog-box">
-                                    <div class="blog-img">
-                                        <img src="images/blogs/blog-4.jpg" alt="">
-                                    </div>
-                                    <div class="blog-box-info">
-                                        <span class="category">Remote Sensing</span>
-                                        <h2 class="title">Sentinel-1 spots floods fast</h2>
-                                        <p class="little-text">A quick guide to radar images and how we map water after storms.</p>
-                                        <span class="date">03 Oct 25</span>
-                                    </div>
-                                </a>
-                            </div>
-                            
-                            
-                        </div>
-                        <!-- load more button -->
-                        <div id="load-posts" class="cbp-l-loadMore-button top_60">
-                            <a href="load-more/blog-posts.html" class="cbp-l-loadMore-link site-btn" rel="nofollow">
-                                <span class="cbp-l-loadMore-defaultText">Load More (<span class="cbp-l-loadMore-loadItems">3</span>)</span>
-                                <span class="cbp-l-loadMore-loadingText">Loading...</span>
-                                <span class="cbp-l-loadMore-noMoreLoading">No More Works</span>
-                            </a>
-                        </div>
-                    </section>
-                </div>
-            </div>
-                
-            <!-- Contact Page
-            ================================================== --> 
-            <div id="contact">
-                <div class="row">
-                    <!-- Contact Informations -->
-                    <section class="contact-info col-md-12 padding_30 padbot_45">
-                        <div class="section-title top_15 bottom_30"><span></span><h2>Contact Informations</h2></div>
-                        <ul>
-                            <li><span>Address:</span> Earth</li>
-                            <li><span>Phone:</span> +39 334 2417102</li>
-                            <li><span>E-mail:</span> sarwary.hafiz@gmail.com</li>
-                            <li>
-                                <div class="social-icons top_15"> 
-                                    <a class="gh" href="https://github.com/hafizsarwary" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i></a> 
-                                    <a class="li" href="https://www.linkedin.com/in/hafizullah-sarwary-a16b26154/" target="_blank" rel="noopener"><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
-                                </div>
-                            </li>
-                        </ul>
-                    </section>
-                    <!-- Journey Map -->
-                    <section class="col-md-12 padding_30 padbot_45">
-                        <div class="section-title top_15 bottom_30"><span></span><h2>Journey Map</h2></div>
-                        <div id="journey-map" style="width: 100%; height: 420px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 14px rgba(0,0,0,0.08);"></div>
-                        <p class="little-text top_15">Explore my path from Kabul to Milano: click markers to see details about my Bachelor's, work at DABS, and ongoing Master's.</p>
-                    </section>
-        </div><!-- Content - End -->
-     </div> <!-- col-md-12 end -->
-</div><!-- row end -->
-<!-- Footer
-================================================== --> 
-<footer>
-    <div class="footer col-md-12 top_30 bottom_30">
-        <div class="name col-md-4 hidden-md hidden-sm hidden-xs">Hafizullah Sarwary.</div>
-        <div class="copyright col-lg-8 col-md-12">© 2025 All rights reserved.</div>  
-    </div>
-</footer>
-    
-</div> <!-- Tab Container - End -->
-</div> <!-- Row - End --> 
-</div> <!-- Wrapper - End -->   
-
-<!-- Javascripts
-================================================== -->  
-<!-- Mobile language prompt (first visit) -->
-<div id="lang-modal" class="lang-modal" aria-hidden="true" role="dialog" aria-label="Choose language">
-  <div class="box">
-    <div class="section-title bottom_15"><span></span><h2>Choose Language</h2></div>
-    <p class="little-text">Select your preferred language:</p>
-    <div class="options">
-      <button type="button" data-lang="en">English</button>
-      <button type="button" data-lang="it">Italiano</button>
-      <button type="button" data-lang="nl">Nederlands</button>
-    </div>
-  </div>
-  </div>
-
-<script src="js/jquery-2.1.4.min.js"></script> 
-<script src="cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
-<script src="js/bootstrap.min.js"></script> 
-<script src="js/jquery.easytabs.min.js"></script>
-<script src="js/owl.carousel.min.js"></script> 
-<!-- Leaflet Map (Journey) -->
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-  crossorigin=""
-/>
-<script
-  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-  crossorigin=""
-></script>
-<script>
-  (function() {
-    // Coordinates
-    var pts = {
-      kpu: { name: 'Kabul Polytechnic University', lat: 34.5373, lng: 69.1653 },
-      dabs: { name: 'DABS (Kabul, Afghanistan)', lat: 34.5553, lng: 69.2075 },
-      polimi: { name: 'Politecnico di Milano (Italy)', lat: 45.4781, lng: 9.2274 }
-    };
-
-    var map;
-
-    function initJourneyMap() {
-      if (map) { return; }
-      var el = document.getElementById('journey-map');
-      if (!el) { return; }
-
-      // Base map
-      map = L.map(el, { zoomControl: true, scrollWheelZoom: false });
-      var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors'
-      }).addTo(map);
-
-      // Markers with popups
-      var markers = [];
-
-      var bachelor = L.marker([pts.kpu.lat, pts.kpu.lng]).bindPopup(
-        '<b>BSc in Geodesy Engineering</b><br/>' +
-        'Kabul Polytechnic University (2011–2015)<br/>' +
-        '<span class="little-text">Focus on GIS, surveying, photogrammetry, and cartography.</span>'
-      );
-      markers.push(bachelor);
-
-      var work = L.marker([pts.dabs.lat, pts.dabs.lng]).bindPopup(
-        '<b>GIS Expert at DABS</b><br/>' +
-        'Kabul, Afghanistan (2018–2023)<br/>' +
-        '<span class="little-text">Led national energy geodatabase; surveys, mapping, and analysis for transmission and substations.</span>'
-      );
-      markers.push(work);
-
-      var master = L.marker([pts.polimi.lat, pts.polimi.lng]).bindPopup(
-        '<b>MSc Geoinformatics (in progress)</b><br/>' +
-        'Politecnico di Milano (2024–present)<br/>' +
-        '<span class="little-text">Geospatial data analysis, WebGIS, ML with EO data, and urban analytics.</span>'
-      );
-      markers.push(master);
-
-      // Add markers and fit bounds
-      var group = L.featureGroup(markers).addTo(map);
-      map.fitBounds(group.getBounds().pad(0.25));
-
-      // Journey line
-      L.polyline([
-        [pts.kpu.lat, pts.kpu.lng],
-        [pts.dabs.lat, pts.dabs.lng],
-        [pts.polimi.lat, pts.polimi.lng]
-      ], { color: '#f0ad4e', weight: 4, opacity: 0.85, lineJoin: 'round' }).addTo(map);
-
-      // Subtle animated focus when opening Contact tab
-      setTimeout(function(){ map.invalidateSize(); }, 300);
-    }
-
-    // Initialize when DOM is ready
-    document.addEventListener('DOMContentLoaded', function(){
-      initJourneyMap();
-    });
-
-    // Reflow map when navigating to the #contact tab (hash changes)
-    window.addEventListener('hashchange', function(){
-      if (location.hash === '#contact' && typeof map !== 'undefined') {
-        setTimeout(function(){ map.invalidateSize(); }, 250);
-      }
-    });
-  })();
-</script>
-<script src="js/main.js"></script>
-<!-- for color alternatives -->
-<script src="js/jquery.cookie-1.4.1.min.js"></script>
-<script src="js/Demo.js"></script>
-<link rel="stylesheet" href="css/Demo.min.css" />
-<!-- Google Translate (language picker support) -->
-<div id="google_translate_element" style="display:none;"></div>
-<script>
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      includedLanguages: 'en,it,nl',
-      autoDisplay: false
-    }, 'google_translate_element');
+<meta name="description" content="Geospatial Systems Engineer portfolio projects.">
+<title>Selected Projects | Geospatial Systems Engineer</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #1a1a2e;
+    --surface: #16213e;
+    --text: #f5f5f5;
+    --muted: #c3c3d7;
+    --border: #39399b;
+    --accent: #e1b83f;
   }
 
-  (function() {
-    function triggerTranslate(lang) {
-      var combo = document.querySelector('select.goog-te-combo');
-      if (!combo) return false;
-      combo.value = lang;
-      // fire change event
-      var event = document.createEvent('HTMLEvents');
-      event.initEvent('change', true, true);
-      combo.dispatchEvent(event);
-      return true;
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+    line-height: 1.45;
+  }
+
+  .container {
+    width: min(1080px, 92vw);
+    margin: 0 auto;
+  }
+
+  header {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 18px;
+    padding: 22px 0;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 18px;
+  }
+
+  nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+  }
+
+  nav a.active {
+    color: var(--accent);
+  }
+
+  main {
+    padding: 56px 0 20px;
+  }
+
+  .title-block h1 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    line-height: 1.1;
+  }
+
+  .title-block p {
+    margin: 14px 0 0;
+    color: var(--muted);
+    max-width: 820px;
+  }
+
+  section {
+    margin-top: 44px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin: 0 0 14px;
+  }
+
+  .what-build {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  .what-build ul {
+    margin: 0;
+    padding-left: 20px;
+    color: var(--text);
+  }
+
+  .what-build li {
+    margin: 0 0 8px;
+  }
+
+  .projects-grid {
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  .project-card h3 {
+    margin: 0;
+    font-size: 1.12rem;
+  }
+
+  .problem-line {
+    margin: 8px 0 16px;
+    color: #d5d5d8;
+    font-size: 0.95rem;
+  }
+
+  .project-item {
+    margin: 0 0 9px;
+  }
+
+  .project-item .label {
+    display: block;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.76rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 3px;
+  }
+
+  .project-item p {
+    margin: 0;
+    color: #e3e3e3;
+    font-size: 0.93rem;
+  }
+
+  .tech {
+    margin: 15px 0 0;
+    font-size: 0.83rem;
+    color: var(--muted);
+  }
+
+  .contact {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  .contact p {
+    margin: 0 0 10px;
+    color: #dddddd;
+  }
+
+  .contact ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .contact a,
+  footer a {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  footer {
+    margin-top: 44px;
+    border-top: 1px solid var(--border);
+    padding: 20px 0 30px;
+  }
+
+  .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  .linkedin-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text);
+  }
+
+  .linkedin-link svg {
+    width: 15px;
+    height: 15px;
+    fill: var(--accent);
+  }
+
+  @media (max-width: 820px) {
+    .nav {
+      justify-content: flex-start;
+      overflow-x: auto;
+      white-space: nowrap;
     }
 
-    function getCookieLang() {
-      var m = document.cookie.match(/(?:^|; )googtrans=\/[^/]+\/([^;]+)/);
-      return m ? decodeURIComponent(m[1]) : 'en';
+    .projects-grid {
+      grid-template-columns: 1fr;
     }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav" id="home">
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a class="active" href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-    function clearTranslateCookies() {
-      var domain = window.location.hostname;
-      var expires = 'Thu, 01 Jan 1970 00:00:01 GMT';
-      document.cookie = 'googtrans=; expires=' + expires + '; path=/';
-      document.cookie = 'googtrans=; expires=' + expires + '; path=/; domain=.' + domain;
-    }
+<main class="container">
+  <section class="title-block">
+    <h1>Selected Projects</h1>
+    <p>Systems I&rsquo;ve designed and built across infrastructure, risk, and spatial intelligence.</p>
+  </section>
 
-    // Sync dropdown with current language from cookie on load
-    document.addEventListener('DOMContentLoaded', function() {
-      var select = document.getElementById('language-select');
-      if (!select) return;
-      var current = getCookieLang();
-      if (["en","it","nl"].indexOf(current) !== -1) {
-        select.value = current;
-      }
+  <section id="projects">
+    <div class="what-build">
+      <h2>What I Build</h2>
+      <ul>
+        <li>Geospatial data validation and cleaning automation</li>
+        <li>Landslide susceptibility modelling and mapping</li>
+        <li>Machine learning workflows for urban growth analysis</li>
+        <li>Interactive WebGIS dashboards for environmental intelligence</li>
+      </ul>
+    </div>
 
-      select.addEventListener('change', function() {
-        var lang = this.value;
-        if (lang === 'en') {
-          clearTranslateCookies();
-          // If Google element exists, switch to EN then reload to fully reset
-          if (!triggerTranslate('en')) {
-            // wait for widget to load, then reset
-            var tries = 0;
-            var timer = setInterval(function(){
-              tries++;
-              if (triggerTranslate('en') || tries > 40) {
-                clearInterval(timer);
-                window.location.reload();
-              }
-            }, 250);
-          } else {
-            window.location.reload();
-          }
-          return;
-        }
+    <div class="projects-grid">
+      <article class="project-card">
+        <h3>GeoCleanr - Geospatial Data Cleaning Library</h3>
+        <p class="problem-line">A Python library for automating geometry and CRS validation in spatial datasets.</p>
+        <div class="project-item"><span class="label">Problem</span><p>Geospatial datasets often contain geometry errors and coordinate reference inconsistencies that break analysis workflows.</p></div>
+        <div class="project-item"><span class="label">Data</span><p>Vector datasets (Shapefiles, GeoJSON, PostGIS layers).</p></div>
+        <div class="project-item"><span class="label">System / Pipeline</span><p>Designed and developed a modular Python library to detect, validate, repair, and report geometry and CRS issues using automated checks and spatial validation routines.</p></div>
+        <div class="project-item"><span class="label">Outcome</span><p>Reduced manual preprocessing effort and improved reliability of spatial data pipelines.</p></div>
+        <p class="tech">Tech: Python, GeoPandas, Shapely, PostGIS</p>
+      </article>
 
-        // ensure widget is ready, then switch
-        if (!triggerTranslate(lang)) {
-          var attempts = 0;
-          var intv = setInterval(function(){
-            attempts++;
-            if (triggerTranslate(lang) || attempts > 40) {
-              clearInterval(intv);
-            }
-          }, 250);
-        }
-      });
+      <article class="project-card">
+        <h3>Landslide Susceptibility WebGIS System</h3>
+        <p class="problem-line">A spatial risk modelling and WebGIS platform for landslide susceptibility analysis.</p>
+        <div class="project-item"><span class="label">Problem</span><p>Infrastructure planning requires spatial identification of high-risk landslide zones.</p></div>
+        <div class="project-item"><span class="label">Data</span><p>Terrain data (DEM), geological layers, land use, slope, environmental factors.</p></div>
+        <div class="project-item"><span class="label">System / Pipeline</span><p>Built a spatial modelling workflow to generate susceptibility maps and deployed results through a WebGIS interface using GeoServer and web layers.</p></div>
+        <div class="project-item"><span class="label">Outcome</span><p>Delivered interactive spatial risk visualization for decision support.</p></div>
+        <p class="tech">Tech: QGIS, GeoServer, Python, WebGIS, Raster Analysis</p>
+      </article>
 
-      // First-visit language prompt (mobile only)
-      var isMobile = window.matchMedia('(max-width: 767px)').matches;
-      var prompted = '1';
-      try { prompted = localStorage.getItem('lang_pref_prompted') || ''; } catch(e) {}
-      if (isMobile && !prompted) {
-        var modal = document.getElementById('lang-modal');
-        if (modal) {
-          modal.classList.add('open');
-          modal.setAttribute('aria-hidden','false');
-          var buttons = modal.querySelectorAll('button[data-lang]');
-          for (var i=0;i<buttons.length;i++){
-            buttons[i].addEventListener('click', function(){
-              var lang = this.getAttribute('data-lang');
-              try { localStorage.setItem('lang_pref_prompted','1'); } catch(e) {}
-              modal.classList.remove('open');
-              modal.setAttribute('aria-hidden','true');
-              if (lang === 'en') {
-                clearTranslateCookies();
-                if (!triggerTranslate('en')) {
-                  var tries=0, t=setInterval(function(){ tries++; if (triggerTranslate('en')||tries>20){ clearInterval(t); window.location.reload(); } }, 200);
-                } else {
-                  window.location.reload();
-                }
-              } else {
-                if (select) select.value = lang;
-                if (!triggerTranslate(lang)) {
-                  var attempts=0, intv=setInterval(function(){ attempts++; if (triggerTranslate(lang)||attempts>20){ clearInterval(intv);} }, 200);
-                }
-              }
-            });
-          }
-        }
-      }
-    });
-  })();
-</script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
- 
+      <article class="project-card">
+        <h3>Urban Growth ML System (Kabul 2001-2024)</h3>
+        <p class="problem-line">A machine learning workflow for detecting urban growth patterns from satellite imagery.</p>
+        <div class="project-item"><span class="label">Problem</span><p>Rapid urban expansion required structured spatial analysis of land-use change over time.</p></div>
+        <div class="project-item"><span class="label">Data</span><p>Multi-temporal satellite imagery, NDVI/NDWI indices, urban classification layers.</p></div>
+        <div class="project-item"><span class="label">System / Pipeline</span><p>Designed an ML-based classification workflow to process satellite imagery and quantify urban expansion trends over two decades.</p></div>
+        <div class="project-item"><span class="label">Outcome</span><p>Generated spatial growth maps and quantified land-use transformation patterns.</p></div>
+        <p class="tech">Tech: Python, QGIS, Google Earth Engine, Scikit-learn</p>
+      </article>
 
+      <article class="project-card">
+        <h3>SE4G - Environmental Intelligence Dashboard</h3>
+        <p class="problem-line">An interactive WebGIS dashboard for air quality monitoring and environmental data visualization.</p>
+        <div class="project-item"><span class="label">Problem</span><p>Air quality data lacked structured visualization and accessible analytics for users.</p></div>
+        <div class="project-item"><span class="label">Data</span><p>Real-time environmental sensor data and statistical datasets.</p></div>
+        <div class="project-item"><span class="label">System / Pipeline</span><p>Developed an interactive dashboard integrating spatial visualization, data filtering, and role-based access control.</p></div>
+        <div class="project-item"><span class="label">Outcome</span><p>Enabled structured environmental monitoring and decision support.</p></div>
+        <p class="tech">Tech: WebGIS, Python, GIS Analysis, Data Visualization</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:sarwary.hafiz@gmail.com">sarwary.hafiz@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/hafizullah-sarwary-a16b26154/" target="_blank" rel="noopener">hafizullah-sarwary-a16b26154</a></p>
+    <p>Location: Milan, Italy</p>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <a class="linkedin-link" href="https://www.linkedin.com/in/hafizullah-sarwary-a16b26154/" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.48 1h.02C3.87 1 4.98 2.12 4.98 3.5zM.5 8h4V23h-4zM8 8h3.83v2.05h.06c.53-1.01 1.84-2.07 3.79-2.07C19.73 7.98 21 10.62 21 14.02V23h-4v-7.48c0-1.78-.03-4.07-2.48-4.07-2.48 0-2.86 1.94-2.86 3.95V23h-4z"/>
+      </svg>
+      LinkedIn
+    </a>
+    <span><a href="mailto:sarwary.hafiz@gmail.com">sarwary.hafiz@gmail.com</a></span>
+    <span>Milan, Italy</span>
+  </div>
+</footer>
 </body>
 </html>
